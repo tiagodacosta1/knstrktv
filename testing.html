@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test KNSTRKTV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">    
+   
+    <link href="../js/jqcloud.min.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jqcloud.min.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+
+<body>
+
+    <div class="content">
+
+        <p class="slider-instruction">drag to read more</p>
+
+        <div class="slider-wrapper">
+            <div class="slider-faux"></div>
+            <div class="slider-faux-2"></div>
+            <div class="slider">
+                <div class="slider-thumb"></div>
+                <div class="slider-progress" style="width: 33.33%;"></div>
+            </div>
+            
+            <div class="slider-value"></div>
+        </div>
+
+        <div class="slider-section" id="slider-info-1">
+            <div class="price">
+                <p>£5K+</p>
+                <p>lorem ipsum dolor</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Lorem ipsum dolor sit amet,</p>
+                <p>consectetur adipiscing elit, sed</p>
+                <p>do eiusmod tempor incididunt</p>
+            </div>
+
+            <ul class="list">
+                <li>Lorem ipsum dolor sit amet, consectetur adipi</li>
+                <li>Lorem ipsum dolor sit amet, consectetur </li>
+                <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+        </div>
+
+        <div class="slider-section" id="slider-info-2">
+            <div class="price">
+                <p>£15K+</p>
+                <p>lorem ipsum dolor</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Lorem ipsum dolor sit amet,</p>
+                <p>consectetur adipiscing elit, sed</p>
+                <p>do eiusmod tempor incididunt</p>
+            </div>
+
+            <ul class="list">
+                <li>Lorem ipsum dolor sit amet, consectetur adipi</li>
+                <li>Lorem ipsum dolor sit amet, consectetur </li>
+                <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+        </div>
+
+        <div class="slider-section" id="slider-info-3">
+            <div class="price">
+                <p>£25K+</p>
+                <p>lorem ipsum dolor</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Lorem ipsum dolor sit amet,</p>
+                <p>consectetur adipiscing elit, sed</p>
+                <p>do eiusmod tempor incididunt</p>
+            </div>
+
+            <ul class="list">
+                <li>Lorem ipsum dolor sit amet, consectetur adipi</li>
+                <li>Lorem ipsum dolor sit amet, consectetur </li>
+                <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+        </div>
+
+    <script>
+        const div1 = document.querySelector('#div1');
+const div2 = document.querySelector('#div2');
+const div3 = document.querySelector('#div3');
+
+const showDivs = (index) => {
+  if (index === 0) {
+    div1.style.display = 'block';
+    div2.style.display = 'none';
+    div3.style.display = 'none';
+  } else if (index === 1) {
+    div1.style.display = 'none';
+    div2.style.display = 'block';
+    div3.style.display = 'none';
+  } else if (index === 2) {
+    div1.style.display = 'none';
+    div2.style.display = 'none';
+    div3.style.display = 'block';
+  }
+};
+
+// Initialize slider and show initial set of divs
+updateSlider(currentRangeIndex);
+showDivs(currentRangeIndex);
+
+// Handle clicks on the slider track
+slider.addEventListener('click', (event) => {
+  const sliderWidth = slider.getBoundingClientRect().width;
+  const clickX = event.clientX - slider.getBoundingClientRect().x;
+  const index = Math.round((clickX / sliderWidth) * (range.length - 1));
+  
+  currentRangeIndex = index;
+  
+  // Update slider and show appropriate set of divs
+  updateSlider(index);
+  showDivs(index);
+});
+
+// Handle thumb drag
+thumb.addEventListener('mousedown', (event) => {
+  event.preventDefault();
+  
+  const sliderWidth = slider.getBoundingClientRect().width;
+
+  const onMouseMove = (moveEvent) => {
+    const dragX = moveEvent.clientX - slider.getBoundingClientRect().x;
+    const index =
+      Math.round((dragX / sliderWidth) * (range.length - 1));
+
+    currentRangeIndex = index;
+
+    // Update slider and show appropriate set of divs
+    updateSlider(index);
+    showDivs(index);
+  };
+
+  const onMouseUp = () => {
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+  };
+
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
+});
+    </script>
+    
+</body>
+
+</html>

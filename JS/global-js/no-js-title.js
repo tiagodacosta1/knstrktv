@@ -1,0 +1,1 @@
+$('.placeholderSiteTitle').remove();
