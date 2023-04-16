@@ -4,8 +4,6 @@ Welcome to the Knstrktv Website! This website is built using HTML, CSS, and Java
 Installation
 To install the Knstrktv Website, simply clone the repository to your local machine:
 
-bash
-Copy code
 git clone https://github.com/tiagodacosta1/knstrktv.git
 
 Usage
