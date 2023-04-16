@@ -689,7 +689,9 @@ a {
 
 /* circle that moves around */
 
-
+#textcontainer{
+    padding-top: 20px;
+}
 
 
 

@@ -142,6 +142,17 @@
     </div>
 
     <div class="content content-cases">
+        <div style="padding: 20px;">
+            <svg id="text-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.32 56.83">
+              <defs>
+                <style>.cls-1{fill:none;stroke:#221f20;stroke-miterlimit:10;stroke-width:.5px;}</style>
+              </defs>
+              <path id="text-curve" d="m2.38,34.99c159.19-100.21,252.13,73.83,486.56,0"/>
+              <text  font-size="12" fill="white">
+                <textPath id="text-path" href="#text-curve"> KNSTRKTV STUDIO - WE CREATE DIGITAL EXPERIENCES - KNSTRKTV STUDIO - WE CREATE DIGITAL EXPERIENCES - </textPath>
+              </text> 
+            </svg>
+          </div>
         <div class="cases">
 
             <div class="cases-left center-left-aligned">
@@ -287,55 +298,22 @@
             </svg>
         </div>
 
+        <div style="padding: 20px;">
+            <svg id="text-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.32 56.83">
+              <defs>
+                <style>.cls-1{fill:none;stroke:#221f20;stroke-miterlimit:10;stroke-width:.5px;}</style>
+              </defs>
+              <path id="text-curve" d="m2.38,34.99c159.19-100.21,252.13,73.83,486.56,0"/>
+              <text y="1" font-size="12" fill="white">
+                <textPath id="text-path" href="#text-curve"> KNSTRKTV STUDIO - WE CREATE DIGITAL EXPERIENCES - KNSTRKTV STUDIO - WE CREATE DIGITAL EXPERIENCES - </textPath>
+              </text> 
+            </svg>
+          </div>
+        
        
-        <svg width="100%" height="400">
-      <defs>
-        <path id="myPath" d="M 0 200 C 50 100, 350 100, 400 200 S 650 300, 800 200 S 1150 100, 1200 200 S 1550 300, 1600 200 S 1950 100, 2000 200" />
-      </defs>
-      <text style="fill: #ffffff">
-        <textPath startOffset="0" id="texto" xlink:href="#myPath">KNSTRKTV STUDIO - We Create Digital Experiences - KNSTRKTV STUDIO - We Create Digital Experiences - KNSTRKTV STUDIO - We Create Digital Experiences - </textPath>
-      </text>
-    </svg>
+          
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var textPath = document.getElementById('texto');
-        var comprimento = textPath.getAttribute('startOffset');
-        var textoLength = document.getElementById('myPath').getTotalLength();
-
-        var animador;
-        var timeoutId;
-        var lastScrollTop = 0;
-
-        window.addEventListener('scroll', function() {
-          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          var scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
-          lastScrollTop = scrollTop;
-
-          clearInterval(animador);
-          animador = setInterval(function () {
-            if (scrollDirection === 'down') {
-              comprimento = (comprimento + 1) % textoLength;
-            } else {
-              comprimento = (comprimento - 1 + textoLength) % textoLength;
-            }
-            textPath.setAttribute('startOffset', comprimento);
-          }, 10);
-
-          clearTimeout(timeoutId);
-          timeoutId = setTimeout(function() {
-            clearInterval(animador);
-          }, 50);
-        });
-
-        window.addEventListener('scroll', function() {
-          clearTimeout(timeoutId);
-          clearInterval(animador);
-        }, { once: true });
-      });
-    </script>
-
-    </div>
+       
 
     <script src="JS/global-js/smooth-scrolling.js"></script>
     <script src="JS/carousel.js"></script>
