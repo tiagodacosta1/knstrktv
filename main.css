@@ -378,6 +378,11 @@ a {
     text-align: left;
 }
 
+#sinusoidal{
+    position: absolute;
+    z-index: -2;
+}
+
 .services-title {
     text-align: center;
     font-family: "Coolvetica Rg", Arial, sans-serif;
