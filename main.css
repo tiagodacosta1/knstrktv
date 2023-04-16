@@ -684,6 +684,7 @@ a {
     height: 20vh;
     margin-top: -15px;
     transform: translateY(50%) rotate(30.96deg); /* Rotate the image 45 degrees clockwise */
+    margin-right: 20px;
 }
 
 /* circle that moves around */
