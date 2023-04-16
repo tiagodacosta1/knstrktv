@@ -159,7 +159,7 @@ table {
 }
 
 body {
-    background-color:#000000;
+    background-color: #000000;
     color: #ffffff;
     position: relative;
     font-family: "Coolvetica Rg", Arial, sans-serif;
@@ -378,9 +378,15 @@ a {
     text-align: left;
 }
 
-#sinusoidal{
+#sinusoidal {
     position: absolute;
     z-index: -2;
+    color: #ffffff;
+
+}
+
+#sinusoidal-text {
+    text-transform: uppercase;
 }
 
 .services-title {
@@ -465,6 +471,7 @@ a {
     font-family: Helvetica;
     font-size: 70px;
     font-weight: 400;
+    text-align: right;
 }
 
 .cases-subtitle {
@@ -666,35 +673,22 @@ a {
     cursor: pointer;
 }
 
-.info-titles {
+.email{
     display: flex;
-    align-items: flex-end;
-    border-bottom: 1px solid black; /* Add a border bottom to the container */
-    padding-bottom: 10px; /* Add some padding to create space between the text and image */
-  }
-  
-.right-align{
-    text-align: left;
-}
-.left-align {
-  text-align: right;
+    align-items: flex-start;
+    justify-content: right;
 }
 
-  
-  #sticker-logo {
+#sticker-logo {
     display: inline-block;
-    margin: 0 auto;
     height: 20vh;
-    transform: translateY(50%) rotate(45deg); /* Rotate the image 45 degrees clockwise */
-  }
-  
-
-
-
+    margin-top: -15px;
+    transform: translateY(50%) rotate(30.96deg); /* Rotate the image 45 degrees clockwise */
+}
 
 /* circle that moves around */
 
-#textcontainer{
+#textcontainer {
     padding-top: 20px;
 }
 
@@ -733,9 +727,9 @@ a {
 
 #text-circle-container {
     position: relative;
-    width: 80vh;
-    height: 80vh;
-    left: -45vh
+    width: 60vh;
+    height: 60vh;
+    left: -35vh;
 }
 
 #text-circle {

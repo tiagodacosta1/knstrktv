@@ -131,7 +131,7 @@
     </div>
 
     <div class="content center">
-     
+
         <p class="services-title">we'll help you with...</p>
         <p class="services-list">ART DIRECTION</p>
         <p class="services-list">BRANDING</p>
@@ -141,15 +141,20 @@
         <p class="services-list">DEVELOPMENT</p>
         <p class="services-list"><img src="Icons/Icon 1.svg" alt="image" id="asterix-icon" /></p>
         <svg id="sinusoidal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.32 56.83">
-            <path d="M2.38 34.99c159.19-100.21 252.13 73.83 486.56 0"
-                style="fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:.5px" />
+            <path id="sinusoidal-text-path" d="M2.38 34.99c159.19-100.21 252.13 73.83 486.56 0"
+                style="fill:none;stroke-miterlimit:10;stroke-width:.5px" />
+            <text y="40" font-size="6" style="fill:#4F4F4F;">
+                <textpath id="sinusoidal-text" href="#sinusoidal-text-path" startoffset="10">KNSTRKTV STUDIO - We design
+                    digital experiences </textpath>
+
+            </text>
         </svg>
     </div>
 
 
 
     <div class="cases-left center-left-aligned">
-      
+
 
 
         <p class="section-title">selected cases</p>
@@ -278,11 +283,12 @@
         </div>
 
         <div class="info-titles">
-            <p class="right-align">LET'S TALK</p>
-            <p class="left-align">INFO@KNSTRKTV.STUDIO</p>
-            <img id="sticker-logo" src="Logos/KNSTRKTV STUDIO - Sticker.svg" />
+            <p>LET'S TALK</p>
+            <div class="email">
+                <span>INFO@KNSTRKTV.STUDIO</span>
+                <span><img id="sticker-logo" src="Logos/KNSTRKTV STUDIO - Sticker.svg"/></span>
+            </div>
         </div>
-
 
         <div class="svg-container">
             <svg id="back-to-top" width="78" height="112" viewBox="0 0 78 112" fill="none"
@@ -292,17 +298,13 @@
             </svg>
         </div>
 
-
-
-
-
-
         <script src="JS/global-js/smooth-scrolling.js"></script>
         <script src="JS/carousel.js"></script>
         <script src="JS/text-circle-script.js"></script>
         <script src="JS/scroll-top.js"></script>
         <script src="JS/case-study-hover.js"></script>
         <script src="JS/slider.js"></script>
+        <script src="JS/sinusoidal-text.js"></script>
 
 </body>
 
