@@ -1,0 +1,154 @@
+/* This file contians the CSS styling for responsive mobile design */
+
+/* Styles for mobile devices */
+@media (max-width: 575px) {
+
+    .header-grid {
+        margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-grid-logo img,
+    .header-grid-logo-2 img {
+        height: 40px;
+    }
+
+    .header-grid-menu {
+        display: none;
+    }
+
+    .footer-wrapper {
+        display: none;
+    }
+
+    .footer-wrapper-mobile {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        bottom: 16px;
+    }
+
+    .footer-mobile {
+        font-family: "Coolvetica Rg", Arial, sans-serif;
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    .footer-centre-mobile {
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .carousel-container {
+        margin-top: 200px;
+    }
+
+    .message {
+        margin-top: 50px;
+        display: block;
+        margin-right: 0;
+    }
+
+    .message :nth-child(1),
+    .message :nth-child(2) {
+        text-align: center;
+    }
+
+    .message-2 {
+        margin-top: 50px;
+    }
+
+    .message-3 {
+        margin-top: 50px;
+        margin-left: 0;
+        display: block;
+        font-size: 10px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .services-title {
+        margin-bottom: 20px;
+    }
+
+    .services-list {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    .cases-image-placeholder {
+        display: none;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .cases-no,
+    .cases-subtitle {
+        font-size: 12px;
+    }
+
+    .cases-title {
+        font-size: 30px;
+        line-height: 1;
+        letter-spacing: 0em;
+        margin-top: 0px;
+    }
+
+    .slider-section,
+    .slider-section-2 {
+        width: 100%;
+        display: grid;
+        /* padding-left: 16px; */
+    }
+
+    .price,
+    .paragraph,
+    .list {
+        display: block;
+        margin-right: 0px;
+    }
+
+    #text-circle-container {
+        width: 90%;
+        left: 10%;
+        overflow: hidden;
+        text-align: right;
+    }
+
+    #text-circle {
+        right: -35vh;
+    }
+
+    .info-titles {
+        font-size: 30px;
+    }
+
+    .email {
+        width: 100%;
+        justify-content: right;
+    }
+
+    #info-title-talk{
+        /* margin-right: 16px; */
+    }
+
+    #sticker-logo {
+        height: 13vh;
+        margin-top: -35px;
+        margin-right: 20px;
+    }
+
+
+}
+
+/* Styles for tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {}
