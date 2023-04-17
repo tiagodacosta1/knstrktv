@@ -8,19 +8,28 @@
   <title>My Website</title>
   <link rel="stylesheet" href="portfolio.css">
 
+  <style>
+    .custom-cursor {
+      cursor: url('/cursor-left-right.svg'), auto;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    #moving-text {
+      position: fixed;
+    }
+  </style>
 </head>
 
-
-
-<body>
-  <div class="close-button-container">
+<div class="close">
+  <div id="close-btn-animation">
     <a href="index.html">
-      <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 57L57 1M1 1L57 57" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <span class="close-btn-span first" id=""></span>
+      <span class="close-btn-span second" id=""></span>
+      <label>Close Button</label>
     </a>
   </div>
-  
+</div>
 
   <div class="fixed-container">
     <div class="left-fixed-column">
@@ -31,38 +40,11 @@
     </div>
   </div>
 
-
- 
-
   <div class="custom-cursor">
     <span id="moving-text">My element with custom cursor</span>
   </div>
-  
-  <style>
-    .custom-cursor {
-    cursor: url('/cursor-left-right.svg'), auto;
-    z-index: 9999;
-    pointer-events: none;
-  }
-  
-  #moving-text {
-    position: fixed;
-  }
-     
-    
-    </style>
-  <script>
-  var movingText = document.getElementById("moving-text");
-document.addEventListener("mousemove", function(e) {
-  movingText.style.left = e.pageX + "px";
-  movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
-});
 
-  </script>
-
-
-
-  <header>
+  <!-- <header>
     <div id="logo-left">
       <img src="Logos/KNSTRKTV.svg" alt="KNSTRKTV logo">
     </div>
@@ -70,7 +52,7 @@ document.addEventListener("mousemove", function(e) {
     <div id="logo-right">
       <img src="Logos/STUDIO.svg" alt="STUDIO logo">
     </div>
-  </header>
+  </header> -->
 
   <div class="footer-wrapper">
     <div class="footer">
@@ -101,6 +83,7 @@ document.addEventListener("mousemove", function(e) {
   </div>
 
   <main class="all-viewports">
+
     <section class="viewport-1">
       <div class="column-left">
         <div id="viewport-text">
@@ -169,6 +152,15 @@ document.addEventListener("mousemove", function(e) {
       </div>
     </section>
   </main>
+
+  <script>
+    var movingText = document.getElementById("moving-text");
+    document.addEventListener("mousemove", function (e) {
+      movingText.style.left = e.pageX + "px";
+      movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
+    });
+
+  </script>
 </body>
 
 </html>
