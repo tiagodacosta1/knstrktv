@@ -8,19 +8,14 @@
   <title>My Website</title>
   <link rel="stylesheet" href="portfolio.css">
 
-  <style>
-    .custom-cursor {
-      cursor: url('/cursor-left-right.svg'), auto;
-      z-index: 9999;
-      pointer-events: none;
-    }
 
-    #moving-text {
-      position: fixed;
-    }
-  </style>
 </head>
+<body>
 
+
+
+
+  
 <div class="close">
   <div id="close-btn-animation">
     <a href="index.html">
@@ -31,18 +26,9 @@
   </div>
 </div>
 
-  <div class="fixed-container">
-    <div class="left-fixed-column">
 
-    </div>
-    <div class="right-fixed-column">
-
-    </div>
-  </div>
-
-  <div class="custom-cursor">
-    <span id="moving-text">My element with custom cursor</span>
-  </div>
+  
+   
 
   <!-- <header>
     <div id="logo-left">
@@ -151,16 +137,11 @@
       </div>
       </div>
     </section>
+ 
   </main>
 
   <script>
-    var movingText = document.getElementById("moving-text");
-    document.addEventListener("mousemove", function (e) {
-      movingText.style.left = e.pageX + "px";
-      movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
-    });
 
   </script>
 </body>
-
 </html>
