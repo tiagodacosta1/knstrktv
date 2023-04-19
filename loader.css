@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Coolvetica Rg";
+    src: url("Fonts/Coolvetica/coolvetica\ rg.otf");
+  }
+ @font-face {
+    font-family: "Helvetica";
+    src: url("Fonts/Helvetica/Helvetica.ttf");
+  }
+ 
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    height: 100vh;
+    z-index: 1;
+  }
+  
+  .column {
+    background-color: transparent;
+    z-index: 2;
+  }
+  
+  .column-2 {
+    background-color: transparent;
+    z-index: 2;
+  }
+  
+  .nested-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+  
+  .nested-column-percentage {
+    background-color: transparent;
+    z-index: 3;
+    display: centre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    font-family: "Helvetica";
+    font-size: 30vh;
+    color: white;
+  }
+  
+  .nested-column-logo {
+    display: flex;
+    justify-content: center; /* centers child elements horizontally */
+    align-items: center; /* centers child elements vertically */
+    height: 100%; /* sets the container to the full height of its parent */
+    
+  }
+  
+  .nested-column-logo img {
+    height: 5vh;
+    width: auto;
+    margin-right: 4vh;
+    margin-left: 4vh;
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
