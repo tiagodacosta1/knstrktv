@@ -8,14 +8,8 @@
   <title>My Website</title>
   <link rel="stylesheet" href="portfolio.css">
 
-
 </head>
-<body>
 
-
-
-
-  
 <div class="close">
   <div id="close-btn-animation">
     <a href="index.html">
@@ -26,9 +20,17 @@
   </div>
 </div>
 
+  <div class="fixed-container">
+    <div class="left-fixed-column">
 
-  
-   
+    </div>
+    <div class="right-fixed-column">
+
+    </div>
+  </div>
+
+  <div id="moving-text">My element with custom cursor
+  </div>
 
   <!-- <header>
     <div id="logo-left">
@@ -94,15 +96,14 @@
     <section class="viewport-2">
       <div class="column-left">
         <div id="viewport-text">
-          <span id="case-title">Chapter 1</span><br>
-          <div class="spacer"></div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sem vel tortor malesuada, nec gravida
-          turpis pellentesque. Quisque at dolor vitae magna pharetra feugiat non non lorem. Praesent ut fringilla magna.
-          Duis vitae ante id sem luctus congue a vel elit. Duis faucibus ipsum ut purus tincidunt scelerisque. Nunc
-          pulvinar purus sit amet nulla fringilla euismod. Nulla facilisi. Nam hendrerit, velit eu mollis porttitor, leo
-          turpis interdum tortor, non laoreet justo massa non sapien. Suspendisse vitae mi vel metus mollis tincidunt
-          eget
-          quis dolor. Donec rhoncus nunc in massa fermentum, a gravida elit rutrum.
+          <div id="case-title">Chapter 1</div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sem vel tortor malesuada, nec gravida
+            turpis pellentesque. Quisque at dolor vitae magna pharetra feugiat non non lorem. Praesent ut fringilla magna.
+            Duis vitae ante id sem luctus congue a vel elit. Duis faucibus ipsum ut purus tincidunt scelerisque. Nunc
+            pulvinar purus sit amet nulla fringilla euismod. Nulla facilisi. Nam hendrerit, velit eu mollis porttitor, leo
+            turpis interdum tortor, non laoreet justo massa non sapien. Suspendisse vitae mi vel metus mollis tincidunt
+            eget
+            quis dolor. Donec rhoncus nunc in massa fermentum, a gravida elit rutrum.</div>
         </div>
       </div>
       <div class="column-right">
@@ -137,11 +138,33 @@
       </div>
       </div>
     </section>
- 
   </main>
 
   <script>
+  
+
+    var movingText = document.getElementById("moving-text");
+
+document.addEventListener("mousemove", function (e) {
+  // Get the width of the viewport
+  var viewportWidth = window.innerWidth;
+
+  // Define the width of the columns on the left and right
+  var columnWidth = viewportWidth * 0.25;
+
+  // Check if the mouse cursor is within the left or right column
+  if (e.pageX < columnWidth || e.pageX > (viewportWidth - columnWidth)) {
+    // If so, display the text
+    movingText.style.display = "block";
+    movingText.style.left = e.pageX + "px";
+    movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
+  } else {
+    // Otherwise, hide the text
+    movingText.style.display = "none";
+  }
+});
 
   </script>
 </body>
+
 </html>
