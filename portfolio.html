@@ -35,16 +35,9 @@
 
 <div class="footer-wrapper">
   <div class="footer">
-    <div class="footer-left">
-      <div>Digital Studio</div>
-      <div>We create cool things</div>
-      <div>For cool brands.</div>
-    </div>
+   
 
-    <div class="footer-centre">
-      <div>All rights reserved &#169; 2023</div>
-    </div>
-
+   
     <div class="footer-right">
       <div>Dribbble</div>
       <a href="http://instagram.com/katszczesna" target="_blank">
@@ -64,15 +57,18 @@
 
 <section class="viewport-1">
   <div class="column-left">
-    <div id="viewport-text">
-      <span id="case-title">NIKE</span> <span id="case-subtitle">WEBSITE REDISIGN</span><br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sem vel tortor malesuada, nec gravida
-      turpis pellentesque. Quisque at dolor vitae magna pharetra feugiat non non lorem. Praesent ut fringilla magna.
-      Duis vitae ante id sem luctus congue a vel elit. Duis faucibus ipsum ut purus tincidunt scelerisque. Nunc
-      pulvinar purus sit amet nulla fringilla euismod. Nulla facilisi. Nam hendrerit, velit eu mollis porttitor, leo
-      turpis interdum tortor, non laoreet justo massa non sapien. Suspendisse vitae mi vel metus mollis tincidunt
-      eget
-      quis dolor. Donec rhoncus nunc in massa fermentum, a gravida elit rutrum.
+    <div id="viewport-text-exception">
+      <div id="case-title">NIKE</div>
+      <div id="case-subtitle">WEBSITE REDISIGN</div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sem vel tortor malesuada, nec gravida
+        turpis pellentesque. Quisque at dolor vitae magna pharetra feugiat non non lorem. Praesent ut fringilla magna.
+        Duis vitae ante id sem luctus congue a vel elit. Duis faucibus ipsum ut purus tincidunt scelerisque. Nunc
+        pulvinar purus sit amet nulla fringilla euismod. Nulla facilisi. Nam hendrerit, velit eu mollis porttitor, leo
+        turpis interdum tortor, non laoreet justo massa non sapien. Suspendisse vitae mi vel metus mollis tincidunt
+        eget quis dolor. Donec rhoncus nunc in massa fermentum, a gravida elit rutrum.
+      </div>
+      
     </div>
   </div>
   <div class="column-right">
@@ -132,27 +128,34 @@
 
 <script>
 
+var movingText = document.getElementById("moving-text");
 
-  var movingText = document.getElementById("moving-text");
+document.addEventListener("mousemove", function (e) {
+  // Get the width of the viewport
+  var viewportWidth = window.innerWidth;
 
-  document.addEventListener("mousemove", function (e) {
-    // Get the width of the viewport
-    var viewportWidth = window.innerWidth;
+  // Define the width of the columns on the left and right
+  var columnWidth = viewportWidth * 0.25;
 
-    // Define the width of the columns on the left and right
-    var columnWidth = viewportWidth * 0.25;
+  // Check if the mouse cursor is within the left or right column
+  if (e.pageX < columnWidth) {
+    // If so, display the left text
+    movingText.innerHTML = "Left column text";
+    movingText.style.display = "block";
+  } else if (e.pageX > (viewportWidth - columnWidth)) {
+    // If so, display the right text
+    movingText.innerHTML = "Right column text";
+    movingText.style.display = "block";
+  } else {
+    // Otherwise, hide the text
+    movingText.style.display = "none";
+  }
 
-    // Check if the mouse cursor is within the left or right column
-    if (e.pageX < columnWidth || e.pageX > (viewportWidth - columnWidth)) {
-      // If so, display the text
-      movingText.style.display = "block";
-      movingText.style.left = e.pageX + "px";
-      movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
-    } else {
-      // Otherwise, hide the text
-      movingText.style.display = "none";
-    }
-  });
+  // Set the position of the text
+  movingText.style.left = e.pageX + "px";
+  movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
+});
+
 
 </script>
 </body>

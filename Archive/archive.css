@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Coolvetica Rg";
+  src: url("Fonts/Coolvetica/coolvetica\ rg.otf");
+}
+
+@font-face {
+  font-family: "Coolvetica Rg It";
+  src: url("Fonts/Coolvetica/coolvetica\ rg\ it.otf");
+}
+
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("Fonts/Helvetica/Helvetica-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Oblique";
+  src: url("Fonts/Helvetica/Helvetica-Oblique.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("Fonts/Helvetica/Helvetica.ttf");
+}
+
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: black;
+  color: #ffffff;
+  font-family: "Coolvetica Rg", Arial, sans-serif;
+  cursor: url(/cursor-up&down.svg), auto;
+}
+
+
+
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.grid-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.img-logo {
+  height: 8vh;
+  margin: 0 20vh;
+}
+
+/* LOGO RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+  .left img,
+  .right img {
+    height: 6vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .left img,
+  .right img {
+    height: 4vh;
+  }
+}
+
+
+
+
+
+.footer-wrapper {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer {
+  font-family: "Coolvetica Rg", Arial, sans-serif;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-transform: uppercase;
+  z-index: 2;
+  margin-bottom: 16px;
+}
+
+.footer-left {
+  text-align: left;
+  padding-left: 16px;
+}
+
+.footer-centre {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+  padding-right: 16px;
+}
+
+.footer-left div,
+.footer-right div {
+  margin-top: 2px;
+}
+
+
+
+
+
+.grid {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid__item {
+  position: relative;
+  will-change: transform;
+  grid-column: var(--c);
+  grid-row: var(--r);
+}
+
+.grid__item-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: 50% 50%;
+  will-change: transform, opacity;
+}
+
+.demo-1 .grid__item-img {
+  filter: contrast(70%);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+

@@ -162,14 +162,16 @@ body {
     background-color: #000000;
     color: #ffffff;
     position: relative;
-    font-family: "Coolvetica Rg", Arial, sans-serif;
+
+  
 }
 
 .header-wrapper {
-    font-family: "Coolvetica Rg", Arial, sans-serif;
+  
     margin: 20px 16px 0 16px;
     position: fixed;
     z-index: 1000;
+
 }
 
 .content {

@@ -177,17 +177,13 @@
    width: 100%;
    font-family: "Coolvetica Rg", Arial, sans-serif;
    font-size: 12px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr;
+  
    align-items: center;
    text-transform: uppercase;
 
  }
 
- .footer-left {
-   text-align: left;
- }
+
 
  .footer-centre {
    text-align: center;
@@ -218,6 +214,19 @@
  }
 
 
+ #viewport-text-exception{
+  color: white;
+  font-family: Helvetica;
+  font-style: normal;
+  font-size: 2vh;
+  line-height: 4vh;
+  width: 50%;
+  padding: 5vh 5vh 5vh 5vh;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-right: 20vh;
+ }
 
  #viewport-text {
    color: white;
@@ -230,19 +239,20 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   padding-right: 20v;
 
 
  }
 
  #case-title {
-
-   display: inline-block;
+  display: inline-block;
    font-size: 10vh;
    color: white;
    line-height: 1;
    margin-bottom: 0%;
    padding-bottom: 15vh;
  }
+
 
  #case-subtitle {
    display: inline-block;
