@@ -103,11 +103,19 @@
         margin-top: 0px;
     }
 
-    .slider-section,
-    .slider-section-2 {
+    .slider-section {
         width: 100%;
         display: grid;
-        /* padding-left: 16px; */
+    }
+
+    .price{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .paragraph{
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .price,
@@ -122,6 +130,7 @@
         left: 10%;
         overflow: hidden;
         text-align: right;
+        margin-top: -200px;
     }
 
     #text-circle {
@@ -137,9 +146,6 @@
         justify-content: right;
     }
 
-    #info-title-talk{
-        /* margin-right: 16px; */
-    }
 
     #sticker-logo {
         height: 13vh;

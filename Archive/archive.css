@@ -30,7 +30,7 @@ body {
   background-color: black;
   color: #ffffff;
   font-family: "Coolvetica Rg", Arial, sans-serif;
-  cursor: url(/cursor-up&down.svg), auto;
+  cursor: url('/cursor-up&down.svg') 56 56, auto;
 }
 
 
@@ -75,8 +75,10 @@ a {
 }
 
 
-
-
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .footer-wrapper {
   position: fixed;
@@ -114,9 +116,6 @@ a {
 .footer-right div {
   margin-top: 2px;
 }
-
-
-
 
 
 .grid {
@@ -162,4 +161,74 @@ a {
 
 
 
+/* close button */
+
+.item-6 {
+  background-color: black;
+  position: fixed;
+  top: 5vh;
+  right: 5vh;
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: none;
+}
+.item-6:before, .item-6:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: #FFF;
+  transition: width .2s ease-out;
+}
+.item-6:before {
+  transform: rotate(45deg);
+  left: 7px;
+  top: 7px;
+  transform-origin: left;
+}
+.item-6:after {
+  transform: rotate(-45deg);
+  right: 7px;
+  top: 7px;
+  transform-origin: right;
+}
+.item-6 .inner {
+  color: #FFF;
+}
+.item-6 .inner:before, .item-6 .inner:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: #FFF;
+  transition: width .2s ease-out;
+}
+.item-6 .inner:before {
+  transform: rotate(45deg);
+  transform-origin: right;
+  bottom: 6px;
+  right: 8px;
+}
+.item-6 .inner:after {
+  transform: rotate(-45deg);
+  transform-origin: left;
+  bottom: 6px; 
+  left: 8px;
+}
+.item-6 .label {
+  opacity: 0;
+  transition: all .2s ease-out;
+}
+.item-6:focus:before, .item-6:hover:before, 
+.item-6:focus:after, .item-6:hover:after {
+  width: 10px;
+}
+.item-6:focus .inner:before, .item-6:hover .inner:before, 
+.item-6:focus .inner:after, .item-6:hover .inner:after {
+  width: 10px;
+}
+.item-6:focus .label, .item-6:hover .label {
+  opacity: 1;
+}
 

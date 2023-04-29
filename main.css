@@ -180,6 +180,10 @@ body {
     z-index: -1;
 }
 
+.content-contact{
+    margin-top: -300px;
+}
+
 .center {
     display: flex;
     flex-direction: column;
@@ -209,6 +213,7 @@ body {
 }
 
 .header-grid-menu {
+    font-family: "Coolvetica Rg", Arial;
     font-size: 12px;
     text-align: right;
 }
@@ -333,6 +338,7 @@ a {
 }
 
 .landing-message {
+    font-family: "Coolvetica Rg", Arial;
     margin-top: 20px;
     text-align: center;
 }
@@ -381,6 +387,7 @@ a {
 }
 
 #sinusoidal {
+    font-family: "Coolvetica Rg", Arial;
     position: absolute;
     z-index: -2;
     color: #ffffff;
@@ -427,6 +434,7 @@ a {
 }
 
 .section-title {
+    font-family: "Coolvetica Rg", Arial;
     text-transform: uppercase;
     padding: 16px;
 }
@@ -447,6 +455,7 @@ a {
 }
 
 .cases-no {
+    font-family: "Coolvetica Rg", Arial;
     display: inline-block;
     vertical-align: top;
     font-size: 12px;
@@ -477,6 +486,7 @@ a {
 }
 
 .cases-subtitle {
+    font-family: "Coolvetica Rg", Arial;
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;
@@ -511,19 +521,22 @@ a {
     background-position: center;
 }
 
-.slider-section,
-.slider-section-2 {
+.slider-content{
+    margin-top: 100px;
+}
+
+.slider-section {
     width: 1000px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 .price,
 .paragraph,
 .list {
     display: inline-block;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 
 .price {
@@ -534,6 +547,7 @@ a {
     font-weight: 400;
     line-height: 57px;
     letter-spacing: 0em;
+    width: 400px;
 }
 
 .paragraph {
@@ -542,6 +556,7 @@ a {
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0em;
+    margin-right: 24px;
 }
 
 .list {
@@ -659,10 +674,6 @@ a {
     background-color: white;
 }
 
-.active {
-    background-color: green;
-}
-
 .content-part {
     display: none;
 }
@@ -724,4 +735,18 @@ a {
 
 #info-title-talk{
     margin-right: 16px;
+}
+
+/* .custom-bullet {
+    list-style-image: url('Icons/Icon\ 1.svg');
+}
+
+li { 
+    list-style-image: url('Icons/Icon\ 1.svg');
+}  */
+
+.custom-bullet {
+    list-style: none;
+    background: url('Icons/Icon 1.svg') no-repeat left center;
+    padding-left: 20px;
 }
