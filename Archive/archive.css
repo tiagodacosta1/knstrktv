@@ -1,26 +1,26 @@
 @font-face {
   font-family: "Coolvetica Rg";
-  src: url("Fonts/Coolvetica/coolvetica\ rg.otf");
+  src: url("../Fonts/Coolvetica/coolvetica\ rg.otf");
 }
 
 @font-face {
   font-family: "Coolvetica Rg It";
-  src: url("Fonts/Coolvetica/coolvetica\ rg\ it.otf");
+  src: url("../Fonts/Coolvetica/coolvetica\ rg\ it.otf");
 }
 
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("Fonts/Helvetica/Helvetica-Bold.ttf");
+  src: url("../Fonts/Helvetica/Helvetica-Bold.ttf");
 }
 
 @font-face {
   font-family: "Helvetica Oblique";
-  src: url("Fonts/Helvetica/Helvetica-Oblique.ttf");
+  src: url("../Fonts/Helvetica/Helvetica-Oblique.ttf");
 }
 
 @font-face {
   font-family: "Helvetica";
-  src: url("Fonts/Helvetica/Helvetica.ttf");
+  src: url("../Fonts/Helvetica/Helvetica.ttf");
 }
 
 
@@ -30,7 +30,7 @@ body {
   background-color: black;
   color: #ffffff;
   font-family: "Coolvetica Rg", Arial, sans-serif;
-  cursor: url('/cursor-up&down.svg') 56 56, auto;
+  cursor: url('../cursor-up&down.svg') 56 56, auto;
 }
 
 
