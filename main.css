@@ -448,9 +448,12 @@ a {
     display: inline-block;
 }
 
-.cases-left {}
+.cases-links{
+    width: max-content;
+}
 
 .cases-list {
+    width: max-content;
     margin-bottom: 20px;
 }
 
@@ -491,10 +494,6 @@ a {
     vertical-align: top;
     text-transform: uppercase;
     margin-left: 6px;
-}
-
-.case-study-1:hover {
-    /* background-color: yellow; */
 }
 
 .cases-image-placeholder {
