@@ -1,9 +1,17 @@
  * {
    margin: 0;
    padding: 0;
-
  }
 
+ html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
  /* CUSTOM FONTS */
 
  @font-face {
@@ -159,7 +167,9 @@
  .viewport-2,
  .viewport-3,
  .viewport-4 {
-   display: flex;
+  
+  display: flex;
+  height: 100vh;
  }
 
 
@@ -235,7 +245,7 @@
  /* close button */
 
  .item-6 {
-   z-index: 4;
+   z-index: 5;
    background-color: black;
    position: fixed;
    top: 5vh;
@@ -321,3 +331,27 @@
  .item-6:hover .label {
    opacity: 1;
  }
+
+
+
+ #right-column {
+  cursor: pointer;
+}
+
+#column-left-25, #column-right-25{
+  z-index: 4;
+  position: fixed;
+  width: 25vw;
+  height: 100vh;
+}
+
+#column-right-25{
+  right: 0;
+}
+
+.section {
+  z-index: 999;
+  position: relative;
+  display: flex;
+  height: 100vh;
+} 
