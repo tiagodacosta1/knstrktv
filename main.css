@@ -159,7 +159,7 @@ table {
 }
 
 body {
-    background-color: #000000;
+    background-color: black;
     color: #ffffff;
     position: relative;
 
@@ -281,7 +281,7 @@ a {
     flex-direction: row;
     height: 100%;
     width: 100%;
-    animation: carousel-animation 10s infinite linear;
+    animation: carousel-animation 20s infinite linear;
 }
 
 .carousel-image {
@@ -290,14 +290,6 @@ a {
     height: auto;
     transition: transform 0.3s, width 0.3s;
     z-index: 1;
-}
-
-.carousel-image:nth-child(2) {
-    /* z-index: 2; */
-}
-
-.carousel-image:nth-child(3) {
-    /* z-index: 3; */
 }
 
 /* Add more rules for each image */
@@ -323,30 +315,22 @@ a {
     }
 }
 
-
-.fixed-image {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    /* Vertically center the items */
-    justify-content: center;
-    /* Horizontally center the items */
-    height: 100%;
-    /* Set the height of the container to 100% of its parent */
-}
-
 .landing-message {
     font-family: "Coolvetica Rg", Arial;
-    margin-top: 20px;
+    margin-top: 25vh;
+    padding-left: 13px;
+    padding-right: 13px;
     text-align: center;
+    display: flex;
+    justify-content: center; /* Vertical alignment */
+    align-items: center; /* Horizontal alignment */
 }
 
 .message {
     text-transform: uppercase;
     display: inline-block;
     margin-right: 100px;
+    text-align: center; /* Add this line for center alignment */
 }
 
 .message :nth-child(1) {
@@ -358,6 +342,7 @@ a {
 }
 
 .message :nth-child(2) {
+    text-align: ;
     font-size: 15px;
     font-style: italic;
     font-weight: 400;
@@ -423,14 +408,14 @@ a {
 
 #asterix-icon {
     filter: brightness(0) invert(1);
-    height: 37.997615814208984px;
-    width: 38.99881362915039px;
+    height: 37px;
+    width: 38px;
     left: 0px;
     top: 0.00128173828125px;
     border-radius: 0px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 .section-title {
@@ -483,10 +468,27 @@ a {
 .info-titles {
     text-transform: uppercase;
     font-family: Helvetica;
-    font-size: 70px;
     font-weight: 400;
     text-align: right;
-}
+    font-size: 5vh; /* Initial font size using a percentage of the viewport height */
+    max-height: 100%; /* Ensure the text doesn't overflow the container vertically */
+    max-width: 100%;
+  
+    /* Media queries for different screen sizes */
+    @media (max-width: 600px) {
+      font-size: 8vh; /* Adjust the font size for smaller screens */
+    }
+  
+    @media (min-width: 601px) and (max-width: 1200px) {
+      font-size: 10vh; /* Adjust the font size for medium-sized screens */
+    }
+  
+    @media (min-width: 1201px) {
+      font-size: 13vh; /* Keep the initial font size for larger screens */
+    }
+  }
+  
+
 
 .cases-subtitle {
     font-family: "Coolvetica Rg", Arial;
@@ -617,6 +619,7 @@ a {
     background-color: transparent;
     border: 1px solid #F7F6F7;
     border-left: none;
+    border-right: none; /* Remove the right border */
     width: 10%;
     height: 6px;
 }
@@ -681,7 +684,6 @@ a {
     display: block;
 }
 
-/* Tiago from here */
 
 .svg-container {
     text-align: center;
@@ -704,8 +706,14 @@ a {
     height: 20vh;
     margin-top: -40px;
     transform: translateY(50%) rotate(30.96deg); /* Rotate the image 45 degrees clockwise */
-    margin-right: 35px;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    margin-top: 5vh;
+
 }
+
+
+
 
 /* circle that moves around */
 
@@ -749,3 +757,34 @@ li {
     background: url('Icons/Icon 1.svg') no-repeat left center;
     padding-left: 20px;
 }
+
+
+
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+  }
+  
+  .rotating {
+    animation: rotate 5s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+

@@ -37,7 +37,7 @@ body {
     height: 100%;
   }
   
-  .nested-column-percentage {
+  #nested-column-percentage {
     background-color: transparent;
     z-index: 3;
     display: centre;
@@ -52,9 +52,9 @@ body {
   
   .nested-column-logo {
     display: flex;
-    justify-content: center; /* centers child elements horizontally */
-    align-items: center; /* centers child elements vertically */
-    height: 100%; /* sets the container to the full height of its parent */
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
     
   }
   
@@ -71,21 +71,51 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
   }
+
+ 
+  /* LINE ANIMATION */
   
-  .loading-bar {
-    width: 0%;
-    height: 5px;
-    background-color:aqua;
-    transition: width 0.5s ease-in-out;
+  .line {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0;
+    background-color: white;
+    animation: lineAnimation 2s linear forwards;
+  }
+
+  @keyframes lineAnimation {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 50vh;
+    }
   }
   
-  
+
+/* PERCENTAGE ANIMATION */
+.nested-column-percentage {
+  animation: progress-animation 2s forwards;
+}
+
+@keyframes progress-animation {
+  0% {
+    content: "0%";
+  }
+  100% {
+    content: "100%";
+  }
+}
+
+
 
   
   @media (max-width: 768px) {

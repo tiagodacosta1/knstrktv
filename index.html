@@ -51,10 +51,11 @@
                 <img src="Logos/KNSTRKTV.svg" />
             </div>
             <div class="header-grid-menu">
-                <a href="about">About</a>
-                <a href="portfolio/portfolio1.html">Cases</a>
+                <a href="#about">About</a>
+                <a href="#cases">Cases</a>
                 <a href="#contact">Contact</a>
                 <a href="/archive/archive.html">Archive</a>
+       
             </div>
         </div>
 
@@ -115,7 +116,7 @@
             </div>
 
             <div class="message-2">
-                <svg width="37" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.49 17.152V25.5h-3.98V14.099l-.877 1.002L6.538 25.5H1.364l8.747-9.425.26-.28-.201-.323L.898.5h4.956l7.032 11.465.341.556.449-.474 2.697-2.855.136-.145V.5h3.982v11.401l.876-1.002L30.462.5h5.172l-8.767 9.424-.26.28.202.325L36.1 25.5h-4.977l-7.032-11.465-.342-.559-.449.479-2.675 2.855-.135.144v.198Z" stroke="#F7F6F7"/></svg>
+                <svg id = "svg-message" width="37" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.49 17.152V25.5h-3.98V14.099l-.877 1.002L6.538 25.5H1.364l8.747-9.425.26-.28-.201-.323L.898.5h4.956l7.032 11.465.341.556.449-.474 2.697-2.855.136-.145V.5h3.982v11.401l.876-1.002L30.462.5h5.172l-8.767 9.424-.26.28.202.325L36.1 25.5h-4.977l-7.032-11.465-.342-.559-.449.479-2.675 2.855-.135.144v.198Z" stroke="#F7F6F7"/></svg>
             </div>
 
             <div class="message-3">
@@ -127,7 +128,7 @@
 
     </div>
 
-    <div class="content center">
+    <div class="content center" id="about">
 
         <p class="services-title">we'll help you with...</p>
         <p class="services-list">ART DIRECTION</p>
@@ -154,7 +155,7 @@
 
 
 
-        <p class="section-title">selected cases</p>
+        <p class="section-title" id="cases">selected cases</p>
 
         <a class="cases-links" href="portfolio/portfolio1.html">
             <div class="cases-list case-study-1">
@@ -290,13 +291,51 @@
             <img src="SVG Shapes (Text)/SVG Shape with Text - circle.svg" id="text-circle">
         </div>
 
-        <div class="info-titles" id="contact">
-            <p>LET'S TALK</p>
-            <div class="email">
-                <span>INFO@KNSTRKTV.STUDIO</span>
-                <span><img id="sticker-logo" src="Logos/KNSTRKTV STUDIO - Sticker.svg"/></span>
-            </div>
-        </div>
+
+      <style>
+  .info-titles {
+    display: flex; /* Add flex display to the container */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: flex-end; /* Align items horizontally to the right */
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 5vh; /* Initial font size using a percentage of the viewport height */
+    max-width: 100%;
+  }
+
+  .email {
+    display: flex; /* Add flex display to the email container */
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  .email span {
+    margin-right: 10px; /* Add spacing between email address and logo */
+  }
+
+  .email img {
+    height: 100%; /* Adjust the height of the logo to match the email container */
+  }
+
+  @media (max-width: 600px) {
+    .info-titles {
+      font-size: 3.5vh; /* Adjust the font size for smaller screens */
+    }
+  }
+</style>
+
+<div class="info-titles" id="contact">
+  <p>LET'S TALK</p>
+  <div class="email">
+    <a href="mailto:info@knstrktv.studio">
+      <span>INFO@KNSTRKTV.STUDIO</span>
+      <div id="image-container">
+        <img id="sticker-logo" src="Logos/KNSTRKTV STUDIO - Sticker.svg" alt="KNSTRKTV Studio Logo">
+      </div>
+    </a>
+  </div>
+</div>
+
 
         <div class="svg-container">
             <svg id="back-to-top" width="78" height="112" viewBox="0 0 78 112" fill="none"
@@ -307,8 +346,7 @@
         </div>
 
         <script src="JS/smooth-scrolling.js"></script>
-        <script src="JS/carousel.js"></script>
-        <script src="JS/text-circle-script.js"></script>
+        <script src="JS/rotate-svg.js"></script>        
         <script src="JS/scroll-top.js"></script>
         <script src="JS/case-study-hover.js"></script>
         <script src="JS/slider.js"></script>
