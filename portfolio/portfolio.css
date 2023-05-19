@@ -246,7 +246,7 @@ body {
 
  .item-6 {
    z-index: 5;
-   background-color: black;
+   background-color: transparent;
    position: fixed;
    top: 5vh;
    right: 5vh;

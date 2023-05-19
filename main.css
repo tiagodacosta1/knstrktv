@@ -162,8 +162,6 @@ body {
     background-color: black;
     color: #ffffff;
     position: relative;
-
-  
 }
 
 .header-wrapper {
@@ -171,7 +169,6 @@ body {
     margin: 20px 16px 0 16px;
     position: fixed;
     z-index: 1000;
-
 }
 
 .content {
@@ -470,10 +467,8 @@ a {
     font-family: Helvetica;
     font-weight: 400;
     text-align: right;
-    font-size: 5vh; /* Initial font size using a percentage of the viewport height */
-    max-height: 100%; /* Ensure the text doesn't overflow the container vertically */
-    max-width: 100%;
-  
+    font-size: 20px; /* Initial font size using a percentage of the viewport height */
+   
     /* Media queries for different screen sizes */
     @media (max-width: 600px) {
       font-size: 8vh; /* Adjust the font size for smaller screens */
@@ -709,9 +704,9 @@ a {
     margin-right: 5vh;
     margin-left: 5vh;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 
 }
-
 
 
 
@@ -761,12 +756,7 @@ li {
 
 
 
-.image-container {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-  }
+
   
   .image-container img {
     max-width: 100%;
