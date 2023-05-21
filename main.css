@@ -265,7 +265,7 @@ a {
     margin-top: 2px;
 }
 
-.DICK{
+.slideshow-container {
     overflow: hidden;
 }
 
@@ -282,29 +282,40 @@ a {
         transform: translateX(calc(-20vw * 5));
     }
 }
-    @keyframes scroll {
+
+@keyframes scroll {
     0% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 
     100% {
-    -webkit-transform: translateX(calc(-20vw * 5));
-    transform: translateX(calc(-20vw * 5));
+        -webkit-transform: translateX(calc(-20vw * 5));
+        transform: translateX(calc(-20vw * 5));
     }
-    }
-   
+}
 
-    .slide-track {
-        -webkit-animation: scroll 5s linear infinite;
-        animation: scroll 5s linear infinite;
-        display: flex;
-        align-items: center;
-    }
-   
-    .frame img {
+
+.slide-track {
+    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite;
+    display: flex;
+    align-items: center;
+    
+}
+
+.frame {
+    transition: 0.3s;
+}
+
+.frame img {
     width: 20vw;
-    }
+}
+
+.frame:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
 
 /* Landind Message Grid */
 .custom-container {
@@ -476,11 +487,12 @@ a {
         /* Keep the initial font size for larger screens */
     }
 }
-#email-address{
+
+#email-address {
     display: inline-block;
 }
 
-#email-address:hover{
+#email-address:hover {
     text-decoration: underline;
 }
 
@@ -591,8 +603,9 @@ a {
 
 #slider-text {
     position: relative;
-    top: -30px; /* adjust as needed */
-  }
+    top: -30px;
+    /* adjust as needed */
+}
 
 .slider-wrapper {
     margin-top: 30px;
@@ -647,7 +660,8 @@ a {
     background-size: contain;
     transform: translateX(-50%);
     z-index: 9999 !important;
-    transition: transform 0.3s ease-in-out; /* added transition property */
+    transition: transform 0.3s ease-in-out;
+    /* added transition property */
 }
 
 
@@ -676,7 +690,7 @@ a {
     z-index: 1 !important;
 }
 
-.slider-thumb-img-3{
+.slider-thumb-img-3 {
     position: absolute;
     top: -9px;
     right: -20px;
@@ -721,7 +735,8 @@ a {
 }
 
 .slider-progress {
-    transition: width 0.3s ease-in-out; /* added transition property */
+    transition: width 0.3s ease-in-out;
+    /* added transition property */
 }
 
 .content-part {
@@ -808,7 +823,7 @@ li {
 }
 
 
-#image-container{
+#image-container {
     display: inline-block;
     width: max-content;
 }
