@@ -265,18 +265,11 @@ a {
     margin-top: 2px;
 }
 
-/* infinite autoplay carousel */
-@-webkit-keyframes scroll {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -webkit-transform: translateX(calc(-250px * 7));
-        transform: translateX(calc(-250px * 7));
-    }
+.DICK{
+    overflow: hidden;
 }
+
+/* infinite autoplay carousel */
 
 @keyframes scroll {
     0% {
@@ -285,28 +278,33 @@ a {
     }
 
     100% {
-        -webkit-transform: translateX(calc(-250px * 7));
-        transform: translateX(calc(-250px *));
+        -webkit-transform: translateX(calc(-20vw * 5));
+        transform: translateX(calc(-20vw * 5));
     }
 }
+    @keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-.slideshow {
-    overflow: hidden;
-    position: relative;
-    width: 100vw;
-}
+    100% {
+    -webkit-transform: translateX(calc(-20vw * 5));
+    transform: translateX(calc(-20vw * 5));
+    }
+    }
+   
 
-.slideshow .slide-track {
-    -webkit-animation: scroll 40s linear infinite;
-    animation: scroll 10s linear infinite;
-    display: flex;
-    align-items: center;
-    width: calc(250px * 14);
-}
-
-.frame {
-    width: 250px;
-}
+    .slide-track {
+        -webkit-animation: scroll 5s linear infinite;
+        animation: scroll 5s linear infinite;
+        display: flex;
+        align-items: center;
+    }
+   
+    .frame img {
+    width: 20vw;
+    }
 
 /* Landind Message Grid */
 .custom-container {
