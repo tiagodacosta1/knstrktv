@@ -162,6 +162,11 @@ body {
     background-color: black;
     color: #ffffff;
     position: relative;
+    
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .header-wrapper {
@@ -177,9 +182,6 @@ body {
     z-index: -1;
 }
 
-.content-contact{
-    margin-top: -300px;
-}
 
 .center {
     display: flex;
@@ -223,11 +225,8 @@ body {
 
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
 
+/* footer */
 .footer-wrapper {
     position: fixed;
     z-index: 1000;
@@ -265,108 +264,90 @@ a {
     margin-top: 2px;
 }
 
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-    width: 100%;
-    margin-top: 100px;
-}
-
-.carousel-images {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    animation: carousel-animation 20s infinite linear;
-}
-
-.carousel-image {
-    margin-right: 20px;
-    margin-left: -60px;
-    height: auto;
-    transition: transform 0.3s, width 0.3s;
-    z-index: 1;
-}
-
-/* Add more rules for each image */
-
-.carousel-image:hover {
-    transform: scale(1.2);
-    z-index: 3;
-    transition: 0.3s;
-}
-
-.carousel-image:nth-child(2n+1) {
-    margin-top: 30px;
-    /* adjust as needed */
-}
-
-@keyframes carousel-animation {
+/* infinite autoplay carousel */
+    @-webkit-keyframes scroll {
     0% {
-        transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     }
-
     100% {
-        transform: translateX(-100%);
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
     }
-}
+    }
+    @keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * ));
+    }
+    }
+    .slideshow {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    }
 
-.landing-message {
-    font-family: "Coolvetica Rg", Arial;
-    margin-top: 25vh;
-    padding-left: 13px;
-    padding-right: 13px;
-    text-align: center;
+    .slideshow .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 10s linear infinite;
     display: flex;
-    justify-content: center; /* Vertical alignment */
-    align-items: center; /* Horizontal alignment */
-}
+    align-items: center;
+    width: calc(250px * 14);
+    }
+   
+    .frame {
+    width: 250px;
+    }
 
-.message {
+/* Landind Message Grid */
+.custom-container {
+    display: flex;
+    margin-top: 15vh;
+  }
+  
+  .custom-box {
+    border: 1px solid white;
+    width: 10vw; /* Adjust the width as needed */
+    height: 10vh; /* Adjust the height as needed */
+    padding: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-box-1 {
     text-transform: uppercase;
-    display: inline-block;
-    margin-right: 100px;
-    text-align: center; /* Add this line for center alignment */
-}
-
-.message :nth-child(1) {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.message :nth-child(2) {
-    text-align: ;
-    font-size: 15px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.message-2 {
-    display: inline-block;
-    height: 26px;
-    width: 37px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-}
-
-.message-3 {
-    margin-left: 100px;
-    display: inline-block;
+    font-family: "Coolvetica Rg", Arial;
+    word-break: break-word;
+    display: flex; /* Add this line */
+    flex-direction: column; /* Add this line */
+  }
+  
+  .custom-box-1 span {
+    text-decoration: underline;
+    color: white;
+  }
+  
+  .custom-box-2 svg {
+    width: 37px; /* Adjust the SVG width as needed */
+    height: 26px; /* Adjust the SVG height as needed */
+  }
+  
+  .custom-box-3 {
     font-family: Helvetica;
     font-size: 10px;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0em;
-    text-align: left;
-}
+  }
+
+
 
 #sinusoidal {
     font-family: "Coolvetica Rg", Arial;
