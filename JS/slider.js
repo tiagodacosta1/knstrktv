@@ -5,6 +5,14 @@ const progress = document.querySelector('.slider-progress');
 const range = [0, 1, 2];
 let currentRangeIndex = 0;
 
+// // Update slider text position
+// const sliderText = document.querySelector('#slider-text');
+// const sliderWidth = slider.getBoundingClientRect().width;
+// const textWidth = sliderText.getBoundingClientRect().width;
+// const textOffset = (textWidth / (range.length - 1)) * currentRangeIndex;
+// const textLeft = `${(currentRangeIndex / (range.length - 1)) * (100 - (textWidth / sliderWidth) * 100) + textOffset}%`;
+// sliderText.style.left = textLeft;
+
 const updateSlider = (index) => {
     // Update thumb position
     const percent = (index / (range.length - 1)) * 100;
