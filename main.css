@@ -309,11 +309,12 @@ a {
 /* Landind Message Grid */
 .custom-container {
     display: flex;
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
+    justify-content: center;
 }
 
 .custom-box {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 10vw;
     /* Adjust the width as needed */
     height: 10vh;
