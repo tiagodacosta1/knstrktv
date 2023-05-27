@@ -158,6 +158,26 @@ table {
     src: url("Fonts/Helvetica/Helvetica.ttf");
 }
 
+
+
+.page-transition {
+    animation: slide 0.5s ease-in-out;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+
+
+
 body {
     background-color: black;
     color: #ffffff;
@@ -297,6 +317,7 @@ a {
 
 
 .slide-track {
+    margin-top: 10vh;
     -webkit-animation: scroll 30s linear infinite;
     animation: scroll 30s linear infinite;
     display: flex;
@@ -320,7 +341,7 @@ a {
 /* Landind Message Grid */
 .custom-container {
     display: flex;
-    /* margin-top: 15vh; */
+ 
     justify-content: center;
 }
 
