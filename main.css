@@ -339,10 +339,21 @@ a {
 }
 
 /* Landind Message Grid */
-.custom-container {
+.custom-container{
     display: flex;
  
     justify-content: center;
+}
+
+.custom-container-slider{
+    text-align: center; /* Center content horizontally */
+}
+
+.custom-box-slider{
+    font-family: "Coolvetica Rg", Arial;
+    display: inline-block;
+    text-align: left; /* Reset text alignment for nested content */
+    padding: 50px;
 }
 
 .custom-box {
@@ -357,6 +368,31 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.custom-box-2 {
+    /* Adjust the width as needed */
+    /* Adjust the height as needed */
+    padding: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-box-2-2 {
+    /* width: max-content; */
+    /* Adjust the width as needed */
+    /* heigh    t: 10vh; */
+    /* Adjust the height as needed */
+    padding: 10px;
+    /* margin-right: 10px; */
+    float: left;
+    word-wrap: break-word;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .custom-box-1 {
@@ -444,6 +480,11 @@ a {
     padding: 16px;
 }
 
+.cases-left{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
 .cases {
     padding: 16px 0 16px 16px;
     /* display: grid;
@@ -491,6 +532,7 @@ a {
     font-weight: 400;
     text-align: right;
     font-size: 20px;
+    margin-top: -100px;
     /* Initial font size using a percentage of the viewport height */
 
     /* Media queries for different screen sizes */
@@ -552,6 +594,11 @@ a {
     pointer-events: none;
 }
 
+#slider-viewheight{
+    min-height: max-content;
+    margin-bottom: 150px;
+}
+
 .slider-content {
     margin-top: 100px;
 }
@@ -570,6 +617,11 @@ a {
     /* margin-right: 100px; */
 }
 
+
+.price-2 {
+    /* display: inline-block; */
+}
+
 .price {
     text-transform: uppercase;
     font-family: Helvetica;
@@ -581,7 +633,18 @@ a {
     width: 400px;
 }
 
-.paragraph {
+.price-2 {
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 57px;
+    letter-spacing: 0em;
+    width: 400px;
+}
+
+.paragraph, .paragraph-2 {
     font-family: Helvetica;
     font-size: 12px;
     font-weight: 400;
@@ -811,7 +874,7 @@ a {
     position: relative;
     top: -100px;
     width: 60vh;
-    height: 60vh;
+    height: 50vh;
     left: -35vh;
 }
 
