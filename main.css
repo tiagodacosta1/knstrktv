@@ -318,11 +318,10 @@ a {
 
 .slide-track {
     margin-top: 10vh;
-    -webkit-animation: scroll 30s linear infinite;
-    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 35s linear infinite;
+    animation: scroll 35s linear infinite;
     display: flex;
     align-items: center;
-    
 }
 
 .frame {
@@ -550,6 +549,19 @@ a {
         font-size: 13vh;
         /* Keep the initial font size for larger screens */
     }
+}
+
+.info-titles-mobile {
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: -100px;
+    display: none;
+}
+
+#info-titles-title-mobile{
+    text-align: right;
 }
 
 #email-address {
@@ -862,7 +874,13 @@ a {
 
 }
 
-
+#sticker-logo-mobile{
+    display: inline-block;
+    height: 12vh;
+    transform: translateY(50%) rotate(30.96deg);
+    margin-left: 2vh;
+    margin-top: 7vh;
+}
 
 /* circle that moves around */
 
