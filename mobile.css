@@ -3,6 +3,44 @@
 /* Styles for mobile devices */
 @media (max-width: 575px) {
 
+    .slide-track {
+        margin-top: 30vh;
+        -webkit-animation: scroll 35s linear infinite;
+        animation: scroll 35s linear infinite;
+        display: flex;
+        align-items: center;
+    }
+
+    .frame img {
+        width: 35vw;
+    }
+
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    
+        100% {
+            -webkit-transform: translateX(calc(-35vw * 5));
+            transform: translateX(calc(-35vw * 5));
+        }
+    }
+    
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    
+        100% {
+            -webkit-transform: translateX(calc(-35vw * 5));
+            transform: translateX(calc(-35vw * 5));
+        }
+    }
+
+   
+
     .header-grid {
         margin-top: 50px;
         grid-template-columns: 1fr 1fr;
@@ -72,12 +110,15 @@
         /* Add this line */
         flex-direction: column;
         /* Add this line */
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .custom-box-2 {
         padding: 10px;
         margin-right: 0px;
         margin: 0 auto;
+        margin-bottom: 50px;
         word-wrap: break-word;
         display: flex;
         align-items: center;
@@ -132,8 +173,8 @@
     }
 
     .custom-box-slider{
-        text-align: left; /* Reset text alignment for nested content */
-        padding: 18px;
+        text-align: left;
+        width: 50%;
     }
 
     .price-2 {
@@ -149,7 +190,7 @@
         margin-top: -200px;
     }
 
-    .cases-left{
+    .cases-left, .padding-18{
         padding: 18px;
     }
 
@@ -158,14 +199,23 @@
     }
 
     .info-titles {
-        font-size: 30px;
+        display: none;
+    }
+
+    .info-titles-mobile{
+        display: block;
+    }
+
+    .cases-subtitle {
+        display: block;
+        margin-left: 3vh;
+        margin-top: 1vh;
     }
 
     .email {
         width: 100%;
         justify-content: right;
     }
-
 
     #sticker-logo {
         height: 13vh;
@@ -192,7 +242,7 @@
 @media (max-width: 945px) {
 
     .custom-box-slider{
-        padding: 18px;
+        padding: 0px;
         width: 100%;
     }
 
@@ -201,7 +251,7 @@
 @media (max-width: 1137px) {
 
     .custom-box-slider{
-        padding: 18px;
+        padding: 0px;
     }
 
 }
