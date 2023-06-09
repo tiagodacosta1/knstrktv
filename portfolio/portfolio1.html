@@ -7,24 +7,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My Website</title>
   <link rel="stylesheet" href="portfolio.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <link href="../JS/global-js/jqcloud.min.css">
-  <script src="../JS/global-js/jquery-3.1.1.min.js"></script>
-  <script src="../JS/global-js/jqcloud.min.js"></script>
-  <script src="portfolio.js"></script>
+
+
+  <!-- for scroll animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
 <body>
+<div id="fullPage">
 
-  <a href="portfolio2.html">
+ 
+
+  
+
+<a href="portfolio2.html">
     <div id="column-left-25"></div>
   </a>
 
   <a href="portfolio3.html">
     <div id="column-right-25"></div>
   </a>
+
 
   <a href="../index.html">
     <button class="item-6">
@@ -63,7 +69,7 @@
       </div>
     </div>
   </div>
-
+  <div class="section s1">
   <div class="viewport-1 viewport">
     <div class="column-left">
       <div id="viewport-text-exception">
@@ -84,6 +90,9 @@
       <img src="../Images/Slider_Img_1.png" alt="Image 2">
     </div>
   </div>
+</div>
+
+<div class="section s2">
 
   <div class="viewport-2 viewport">
     <div class="column-left">
@@ -102,10 +111,16 @@
       <img src="../Images/Slider_Img_2.png" alt="Image 2">
     </div>
   </div>
+</div>
+
+<div class="section s3">
 
   <div class="viewport-3 viewport">
     <img src="../Images/Slider_Img_4.png" alt="Image 3">
   </div>
+</div>
+
+<div class="section s4">
 
   <div class="viewport-4 viewport">
     <div class="column-left">
@@ -124,49 +139,18 @@
       <img src="../Images/Slider_Img_3.png" alt="Image 2">
     </div>
   </div>
+</div>
+</div>
 
-  <script>
-
-    var movingText = document.getElementById("moving-text");
-    var rightColumn = document.getElementById("right-column");
-
-    document.addEventListener("mousemove", function (e) {
-      // Get the width of the viewport
-      var viewportWidth = window.innerWidth;
-
-      // Define the width of the columns on the left and right
-      var columnWidth = viewportWidth * 0.25;
-
-      // Check if the mouse cursor is within the left or right column
-      if (e.pageX < columnWidth) {
-        // If so, display the left text
-        movingText.innerHTML = "Left column text";
-        movingText.style.display = "block";
-      } else if (e.pageX > (viewportWidth - columnWidth)) {
-        // If so, display the right text
-        movingText.innerHTML = "Right column text";
-        movingText.style.display = "block";
-
-        // Check if the user clicked within the right column
-        if (e.target === rightColumn) {
-          // If so, navigate to portfolio2.html
-          window.location.href = "../portfolio2.html";
-        }
-
-      } else {
-        // Otherwise, hide the text
-        movingText.style.display = "none";
-      }
-
-      // Set the position of the text
-      movingText.style.left = e.pageX + "px";
-      movingText.style.top = e.pageY - document.documentElement.scrollTop + "px";
-    });
-
-
-  </script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  new fullpage('#fullPage', {
+    autoScrolling: true
+  });
+</script>
 </body>
-
 </html>
+
+
+
+
