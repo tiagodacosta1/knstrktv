@@ -167,7 +167,6 @@ body {
  .viewport-2,
  .viewport-3,
  .viewport-4 {
-  
   display: flex;
   height: 100vh;
  }
@@ -177,7 +176,7 @@ body {
    color: white;
    font-family: Helvetica;
    font-style: normal;
-   font-size: 2vh;
+   font-size: 0.8em;
    line-height: 4vh;
    width: 50%;
    padding: 5vh 5vh 5vh 5vh;
@@ -191,7 +190,7 @@ body {
    color: white;
    font-family: Helvetica;
    font-style: normal;
-   font-size: 2vh;
+   font-size: 0.8em;
    line-height: 4vh;
    width: 100%;
    padding: 5vh 5vh 5vh 5vh;
@@ -205,7 +204,7 @@ body {
 
  #case-title {
    display: inline-block;
-   font-size: 10vh;
+   font-size: 72px;
    color: white;
    line-height: 1;
    margin-bottom: 0%;
@@ -215,7 +214,7 @@ body {
 
  #case-subtitle {
    display: inline-block;
-   font-size: 2vh;
+   font-size: 1.2em;
    color: white;
    vertical-align: top;
    line-height: 1;
@@ -232,15 +231,10 @@ body {
    object-fit: contain;
  }
 
-
-
  .viewport-3 img {
    max-width: 100%;
    max-height: 100%;
  }
-
-
-
 
  /* close button */
 
@@ -248,8 +242,8 @@ body {
    z-index: 5;
    background-color: transparent;
    position: fixed;
-   top: 5vh;
-   right: 5vh;
+   top: 2vh;
+   right: 2vh;
    width: 50px;
    height: 50px;
    border: none;
@@ -355,3 +349,25 @@ body {
   display: flex;
   height: 100vh;
 } 
+
+
+@media (max-width: 575px) {
+  .column-left,
+  .column-right {
+    background-color: red;
+    width: 100%;
+    height: max-content;
+    display:inline;
+  }
+
+  #viewport-text-exception {
+    font-size: 0.8em;
+    line-height: 4vh;
+    width: 100%;
+    padding: 5vh 5vh 5vh 5vh;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-right: 0;
+  }
+ }
