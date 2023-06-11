@@ -162,18 +162,19 @@ table {
 
 .page-transition {
     animation: slide 0.5s ease-in-out;
-  }
-  
-  @keyframes slide {
+}
+
+@keyframes slide {
     0% {
-      transform: translateX(100%);
-      opacity: 0;
+        transform: translateX(100%);
+        opacity: 0;
     }
+
     100% {
-      transform: translateX(0%);
-      opacity: 1;
+        transform: translateX(0%);
+        opacity: 1;
     }
-  }
+}
 
 
 
@@ -338,20 +339,22 @@ a {
 }
 
 /* Landind Message Grid */
-.custom-container{
+.custom-container {
     display: flex;
- 
+
     justify-content: center;
 }
 
-.custom-container-slider{
-    text-align: center; /* Center content horizontally */
+.custom-container-slider {
+    text-align: center;
+    /* Center content horizontally */
 }
 
-.custom-box-slider{
+.custom-box-slider {
     font-family: "Coolvetica Rg", Arial;
     display: inline-block;
-    text-align: left; /* Reset text alignment for nested content */
+    text-align: left;
+    /* Reset text alignment for nested content */
     padding: 50px;
 }
 
@@ -479,7 +482,7 @@ a {
     padding: 16px;
 }
 
-.cases-left{
+.cases-left {
     margin-top: 100px;
     margin-bottom: 150px;
 }
@@ -560,7 +563,7 @@ a {
     display: none;
 }
 
-#info-titles-title-mobile{
+#info-titles-title-mobile {
     text-align: right;
 }
 
@@ -606,7 +609,7 @@ a {
     pointer-events: none;
 }
 
-#slider-viewheight{
+#slider-viewheight {
     min-height: max-content;
     margin-bottom: 150px;
 }
@@ -618,21 +621,16 @@ a {
 .slider-section {
     width: 1000px;
     margin: 0 auto;
-    /* display: flex; */
-    /* justify-content: center; */
+
 }
 
 .price,
 .paragraph,
 .list {
     display: inline-block;
-    /* margin-right: 100px; */
+
 }
 
-
-.price-2 {
-    /* display: inline-block; */
-}
 
 .price {
     text-transform: uppercase;
@@ -656,7 +654,8 @@ a {
     width: 400px;
 }
 
-.paragraph, .paragraph-2 {
+.paragraph,
+.paragraph-2 {
     font-family: Helvetica;
     font-size: 12px;
     font-weight: 400;
@@ -874,7 +873,7 @@ a {
 
 }
 
-#sticker-logo-mobile{
+#sticker-logo-mobile {
     display: inline-block;
     height: 12vh;
     transform: translateY(50%) rotate(30.96deg);
@@ -954,3 +953,29 @@ li {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
+
+/* animation for black container */
+
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #4bedc2;
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+

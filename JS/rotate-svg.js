@@ -8,7 +8,7 @@ var imageAngle = 0;
 var imageLastScrollTop = 0;
 
 function rotateElements() {
-  var st = window.pageYOffset || document.documentElement.scrollTop;
+  var st = window.scrollY || window.pageYOffset;
 
   if (st > stickerLastScrollTop) {
     stickerAngle += 1;
@@ -27,6 +27,4 @@ function rotateElements() {
   imageLastScrollTop = st;
 }
 
-window.onscroll = function() {
-  rotateElements();
-};
+window.addEventListener('scroll', rotateElements);
